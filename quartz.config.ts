@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       websiteId: "6edff434-c4a3-4bad-a5f9-2e8801698a69",
     },
     locale: "zh-CN",
-    baseUrl: "agi.github.io",
+    baseUrl: "agioracle.github.io",
     ignorePatterns: ["private", "templates", ".obsidian", "Tweets"],
     defaultDateType: "created",
     generateSocialImages: true,
