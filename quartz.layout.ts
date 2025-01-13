@@ -8,8 +8,9 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/agioracle",
+      Twitter: "https://twitter.com/agioracle",
+      RSS: "/index.xml",
     },
   }),
 }
@@ -27,11 +28,27 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
+    Component.DesktopOnly(
+      Component.RecentNotes({
+        limit: 3,
+        showTags: false,
+        filter: (f) =>
+          (f.slug!.startsWith("writings/explanation") || f.slug!.startsWith("writings/how-to") || f.slug!.startsWith("writings/reference") || f.slug!.startsWith("writings/tutorial") || f.slug!.startsWith("writings/fiction")) && f.slug! !== "writings/index" && !f.frontmatter?.noindex,
+        linkToMore: "writings/" as SimpleSlug,
+      }),
+    ),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
+    Component.Graph({
+      localGraph: {
+        showTags: false,
+      },
+      globalGraph: {
+        showTags: false,
+      },
+    }),
     Component.Backlinks(),
   ],
 }

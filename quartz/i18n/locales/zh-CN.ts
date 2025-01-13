@@ -30,17 +30,17 @@ export default {
       darkMode: "暗色模式",
     },
     explorer: {
-      title: "探索",
+      title: "全部笔记",
     },
     footer: {
-      createdWith: "Created with",
+      createdWith: "Powered by",
     },
     graph: {
       title: "关系图谱",
     },
     recentNotes: {
-      title: "最近的笔记",
-      seeRemainingMore: ({ remaining }) => `查看更多${remaining}篇笔记 →`,
+      title: "近期笔记",
+      seeRemainingMore: ({ remaining }) => `查看更多 →`,
     },
     transcludes: {
       transcludeOf: ({ targetSlug }) => `包含${targetSlug}`,
@@ -54,13 +54,13 @@ export default {
       title: "目录",
     },
     contentMeta: {
-      readingTime: ({ minutes }) => `${minutes}分钟阅读`,
+      readingTime: ({ minutes }) => `⏱️ ${minutes} 分钟`,
     },
   },
   pages: {
     rss: {
-      recentNotes: "最近的笔记",
-      lastFewNotes: ({ count }) => `最近的${count}条笔记`,
+      recentNotes: "近期笔记",
+      lastFewNotes: ({ count }) => `近期的${count}条笔记`,
     },
     error: {
       title: "无法找到",
