@@ -1,5 +1,5 @@
 ---
-title: Agi Notes
+title: 🌱🌱🌱🌱🌱🌱🌱
 date: 2024-12-31
 draft: false
 ---
